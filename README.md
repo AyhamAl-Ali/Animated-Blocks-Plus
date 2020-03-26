@@ -1,4 +1,4 @@
-# Animated-Blocks-Plus
+# AnimatedBlocksPlus
 Animated Blocks Plus script is now FREE
 
 
