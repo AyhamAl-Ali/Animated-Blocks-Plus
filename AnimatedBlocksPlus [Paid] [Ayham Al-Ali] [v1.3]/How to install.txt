@@ -1,0 +1,8 @@
+How to install: (v1.3)
+
+1. Download AnimatedBlocksPlus.sk file
+2. Download Skript plugin (v2.2+)
+3. Download All the requirements:
+  SkUtilities, SkQuery-Lime, SkRayFall. 
+4. Drop AnimatedBlocksPlus.sk in "plugins/skript/scripts" folder
+5. Restart/Reload your server, have fun.

@@ -1,0 +1,19 @@
+﻿♦ Update v1.3 ♦
+
+
+» INFO:
+
+• Sorry for not updating this for a while.
+• In this update there is some important fixes and improvements it's recommended to update.
+
+
+» CHANGELOG:
+  - Fix: Folder existence check.
+  - Fix: Config values set/edit.
+  - Fix: Config not updating after some actions.
+  - Improvement: Block speed is now 100% correct with with lag free and perfect timing.
+  - Improvement: reduced lag from particles
+  - New: Particles Radius (to reduce lag) (Customizable)
+
+» Have a great day.
+- Ayham Al-Ali.

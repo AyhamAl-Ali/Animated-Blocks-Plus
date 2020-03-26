@@ -1,0 +1,874 @@
+#--░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ 
+#--▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ 
+#--░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ 
+#--
+#--▒█▀▀▀█ ▒█▀▀█ ▒█▀▀█ ▀█▀ ▒█▀▀█ ▀▀█▀▀ 　 ▒█▀▄▀█ ░█▀▀█ ▒█▀▀▄ ▒█▀▀▀ 　 ▒█▀▀█ ▒█░░▒█ 
+#--░▀▀▀▄▄ ▒█░░░ ▒█▄▄▀ ▒█░ ▒█▄▄█ ░▒█░░ 　 ▒█▒█▒█ ▒█▄▄█ ▒█░▒█ ▒█▀▀▀ 　 ▒█▀▀▄ ▒█▄▄▄█ 
+#--▒█▄▄▄█ ▒█▄▄█ ▒█░▒█ ▄█▄ ▒█░░░ ░▒█░░ 　 ▒█░░▒█ ▒█░▒█ ▒█▄▄▀ ▒█▄▄▄ 　 ▒█▄▄█ ░░▒█░░ 
+#--
+#--░█▀▀█ ▒█░░▒█ ▒█░▒█ ░█▀▀█ ▒█▀▄▀█ 　 ░█▀▀█ ▒█░░░ ░█▀▀█ ▒█░░░ ▀█▀ 
+#--▒█▄▄█ ▒█▄▄▄█ ▒█▀▀█ ▒█▄▄█ ▒█▒█▒█ 　 ▒█▄▄█ ▒█░░░ ▒█▄▄█ ▒█░░░ ▒█░ 
+#--▒█░▒█ ░░▒█░░ ▒█░▒█ ▒█░▒█ ▒█░░▒█ 　 ▒█░▒█ ▒█▄▄█ ▒█░▒█ ▒█▄▄█ ▄█▄ 
+#--
+#--░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ 
+#--▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ 
+#--░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ 
+#
+#--▒█▀▄▀█ ░█▀▀█ ▒█▀▀▄ ▒█▀▀▀ 　 ▒█▀▀▀ ▒█▀▀▀█ ▒█▀▀█ 
+#--▒█▒█▒█ ▒█▄▄█ ▒█░▒█ ▒█▀▀▀ 　 ▒█▀▀▀ ▒█░░▒█ ▒█▄▄▀ 
+#--▒█░░▒█ ▒█░▒█ ▒█▄▄▀ ▒█▄▄▄ 　 ▒█░░░ ▒█▄▄▄█ ▒█░▒█ 
+#--
+#--▒█▀▀▀█ ▒█▀▀█ ▒█▀▀█ ░█▀█░ ▒█▀▄▀█ ▒█▀▀▀ ▒█▀▀█ ▒█▀▀▀█ 
+#--▒█░░▒█ ▒█▄▄█ ▒█░▄▄ █▄▄█▄ ▒█▒█▒█ ▒█▀▀▀ ▒█▄▄▀ ░▀▀▀▄▄ 
+#--▒█▄▄▄█ ▒█░░░ ▒█▄▄█ ░░░█░ ▒█░░▒█ ▒█▄▄▄ ▒█░▒█ ▒█▄▄▄█ 
+#--
+#--▒█▀▀▀█ ▒█▀▀▀ ▒█▀▀█ ▒█░░▒█ ▒█▀▀▀ ▒█▀▀█ 
+#--░▀▀▀▄▄ ▒█▀▀▀ ▒█▄▄▀ ░▒█▒█░ ▒█▀▀▀ ▒█▄▄▀ 
+#--▒█▄▄▄█ ▒█▄▄▄ ▒█░▒█ ░░▀▄▀░ ▒█▄▄▄ ▒█░▒█ 
+#--
+#--░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ 
+#--▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ ▀▀ 
+#--░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ ░░ 
+
+# Skript made by Ayham Alali [iTzAyhamHD] YT: ayham5131
+# Made for OPG4MERS server by the OWNER Ayham Alali ^_^
+# It can be used for other servers as well :)
+# please support me if you can by donating: https://www.paypal.me/ayhamalali
+# Thank you for Downloading/Using my Skripts ❤
+# Animated Blocks Plus [Custom] :)
+
+
+# <«»> ----- <«»>
+# 
+# «AnimatedBlocksPlus plugin»
+# Author» Ayham Alali
+# 
+# <«»> ----- <«»>
+
+# <❤>------- VERY IMPORTANT -------<❤>
+# 
+# This is my second paid skript and it's open source for buyers but I hope buyers don't share it with others
+# I know it's just a script that what some people says but I took long time to complete it to upload it for you guys
+# Becuase Deobfuscating scripts is very easy, and I didn't obfuscate my skript. Obfuscating is useless!
+# I hope all buyers have fun with my plugin, And please do not change anything in the code you might break the code
+# Please leave a good review if you liked my work, and report any bug you find, I will fix it quickly
+# Leakers live in peace and don't leak my plugin, support me and buy it to let me make more amazing plugins
+# Also check my other plugins at https://www.spigotmc.org/resources/authors/ayhamalali.101712/
+# If you want to support me more.. you can Donate here ❤ paypal.me/ayhamalali
+# More Features will come soon
+# Feel free to contact me of you want anything, I'm very active on Spigotmc.org (My Profile» https://www.spigotmc.org/members/ayhamalali.101712/)
+# I'm also active on my Discord server (https://discord.gg/uHTVQPD), I might be more active on SpigotMC :)
+# More information about AnimatedBlocksPlus plugin is foundable in the Plugin page.
+# 
+# <❤>------- VERY IMPORTANT -------<❤>
+
+
+
+# Todo:
+#  • v1.0:
+#   - create with id cmd √
+#   - addblocks cmd √
+#   - enable animated block cmd √
+#   - disable animated block cmd √
+#   - removeblock cmd √
+#   - animation speed (try to do it) √
+#   - list cmd √
+#   - tp cmd √
+#   - ID blocks cmd √
+#   - config.yml (blocks) DONE √
+#   - messages.yml √
+#   - add prevent block break √
+#   - add if value is not found, "add by it self (if suggested)" √
+#   - fix when last node got removed, show a lot of error √
+#  • v1.2:
+#   - Particles with animation √ (check in MC) √
+#   - Add help cmd info √
+#   - Add particle cmd with count √
+#   - Add auto value set (particlechanged) in load event √
+#   - Add enable/disable particle (remove it to disable) √
+#  • v1.2.1:
+#    - Fixed Some messages.
+#    - Minor bugs fixed.
+#    - Added Auto version update from any old version to the newest.
+#    - If you have any suggestion/problem please contact me on spigot.
+#  • v1.3:
+#   - Add auto generate configuration files.
+#   - On click on AB message
+#   - Add list of particle (maybe)
+#   - 
+
+# Update info:
+#  + 1.1:
+#   - Added aliases for all the first argument in the main command.
+#   - Added ability to run all the arg 1 from the console except "create" arg.
+#   - Added "version" argument.
+#  + 1.2:
+#   - Added Particles with animation
+#   - Added help cmd info (info about commands in help argument)
+#   - Added particle cmd with count (/ab particle[p], /ab particlecount[pc])
+#   - Added auto value set (particlechanged) in load event (new value in messages.yml)
+#   - Added enable/disable particle (remove the value to disable it)
+#  • v1.3:
+#   - Fixed Files/Directories issues and errors
+#   - Improved Blocks Speed 100% (You can set block speed less than 10 ticks = 0.5 second)
+#   - Fixed config not updating after executing '/ab setspeed <id> <speed>'
+#   - Improved lag from particles
+#   - Now you can choose how many blocks around Animated Block will the particles be seen by players. (Add 'Particle-Radius: 15' to config.yml)
+#   - Fixed config not updating after executing some AB commands.
+
+
+# You may change this if you want
+options:
+
+	console: &d&l&oAB+&7> # Console Prefix
+	error: &cERROR:&c # Error Prefix
+	
+
+
+
+
+
+
+# DON'T CHANGE THIS
+options:
+	codes: 0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f|k|l|m|n|o|r
+
+	cfile: plugins/AnimatedBlocksPlus/config.yml
+	mfile: plugins/AnimatedBlocksPlus/messages.yml
+
+	Version: 1.3 # Current version
+	NewVersion: 1.3 # To check config
+
+
+
+
+# ----
+
+# Json
+# Credits to Rezzedup
+
+function jsonColorize(msg: text, default-color: text = "&r") :: text:
+    set {_m::*} to {_msg} split at ""
+    
+    set {_color-codes} to "{@codes}"
+    set {_colors::*} to {_color-codes} split at "|"
+    
+    set {_color} to colored {_default-color}
+    set {_code} to the first character of {_color}
+    
+    set {_new} to ""
+    set {_skip} to 0
+    
+    loop amount of {_m::*} times:
+    
+        if {_skip} is more than or equal to 1:
+            subtract 1 from {_skip}
+            
+        else:
+            set {_char} to {_m::%loop-number%}
+            set {_next} to {_m::%loop-number + 1%}
+            
+            
+            if {_char} is "&" or {_code}:
+            
+            
+                loop {_colors::*}:
+                
+                    if loop-value-2 is {_next}:
+                        set {_color} to "%{_color}%%{_code}%%{_next}%"
+                        
+                        if {_next} is "r":
+                            set {_color} to {_default-color}
+                            
+                        set {_new} to "%{_new}%%{_color}%"
+                        set {_skip} to 1
+                        
+                if {_skip} is less than or equal to 0:
+                    set {_new} to "%{_new}%%{_char}%"
+                
+            else if {_char} is " ":
+                set {_new} to "%{_new}% %{_color}%"
+            
+            else:
+                set {_new} to "%{_new}%%{_char}%"
+                
+    return {_new}
+    
+
+function jsonSanitize(msg: text) :: text:        
+    set {_m::*} to {_msg} split at ""
+    
+    loop {_m::*}:
+    
+        if loop-value is """":
+            set {_m::%loop-index%} to "\""" # """
+            
+        else if loop-value is "\":
+            set {_m::%loop-index%} to "\\"
+            
+    set {_new} to join {_m::*} with ""
+    return {_new}
+    
+function jsonFormat(msg: text, color: boolean = true) :: text:
+    set {_m::*} to {_msg} split at "||"
+    
+    set {_current} to 1
+    
+    loop {_m::*}:
+        if {_clusters::%{_current}%} is not set:
+            set {_clusters::%{_current}%} to ""
+        
+        if {_clusters::%{_current}%::text} is not set:
+            set {_clusters::%{_current}%::text} to jsonSanitize(loop-value)
+            
+        else:
+            set {_tag} to the first 4 characters of loop-value
+            set {_value} to subtext of loop-value from characters 5 to the length of loop-value
+            
+            if {_tag} is "ttp:":
+                set {_clusters::%{_current}%::tooltip} to jsonSanitize({_value})
+                
+            else if {_tag} is "cmd:":
+                set {_clusters::%{_current}%::command} to jsonSanitize({_value})
+                
+            else if {_tag} is "sgt:":
+                set {_clusters::%{_current}%::suggest} to jsonSanitize({_value})
+                
+            else if {_tag} is "url:":
+            
+                if {_value} doesn't contain "http://" or "https://":
+                    set {_value} to "http://%{_value}%"
+                    
+                set {_clusters::%{_current}%::url} to jsonSanitize({_value})
+                
+            else if {_tag} is "ins:":
+                set {_clusters::%{_current}%::insertion} to jsonSanitize({_value})
+                
+            else:
+                add 1 to {_current}
+                set {_clusters::%{_current}%::text} to jsonSanitize(loop-value)
+                set {_clusters::%{_current}%} to ""
+                
+     
+    loop {_clusters::*}:
+    
+            
+        set {_i} to loop-index
+        
+        set {_text} to {_clusters::%{_i}%::text}
+        
+        if {_color} is true:
+            set {_text} to jsonColorize({_text})
+            
+        if {_json} is not set:
+            set {_json} to "{""text"":""%{_text}%"""
+        else:
+            set {_json} to "%{_json}%,{""text"":""%{_text}%"""
+        
+        if {_clusters::%{_i}%::tooltip} is set:
+        
+            if {_color} is true:
+                set {_tooltip} to jsonColorize({_clusters::%{_i}%::tooltip})
+                
+            else:
+                set {_tooltip} to {_clusters::%{_i}%::tooltip}
+                
+            set {_json} to "%{_json}%,""hoverEvent"":{""action"": ""show_text"",""value"": ""%{_tooltip}%""}"
+        
+        if {_clusters::%{_i}%::insertion} is set:
+            set {_json} to "%{_json}%,""insertion"":""%{_clusters::%{_i}%::insertion}%"",""obfuscated"":false"
+        
+        if {_clusters::%{_i}%::command} is set:
+            set {_clickable} to "%{_json}%,""clickEvent"":{""action"":""run_command"",""value"":""%{_clusters::%{_i}%::command}%""}"
+            
+        if {_clusters::%{_i}%::suggest} is set:
+            set {_clickable} to "%{_json}%,""clickEvent"":{""action"": ""suggest_command"",""value"": ""%{_clusters::%{_i}%::suggest}%""}"
+            
+        if {_clusters::%{_i}%::url} is set:
+            set {_clickable} to "%{_json}%,""clickEvent"":{""action"": ""open_url"",""value"": ""%{_clusters::%{_i}%::url}%""}"
+            
+        if {_clickable} is set:
+            set {_json} to "%{_clickable}%}"
+            delete {_clickable}
+            
+        else:
+            set {_json} to "%{_json}%}"
+    
+    return "{""text"":"""", ""extra"":[%{_json}%]}"
+
+
+function json(to: text, msg: text, color: boolean = true):
+    set {_msg} to jsonFormat({_msg}, {_color})
+    execute console command "/tellraw %{_to}% %{_msg}%"
+
+# ----
+
+#""" 
+
+
+
+
+# ----
+
+# Thanks to Syst3ms for telling me about this.
+# Credits to Snow-Pyon ❄
+
+function txt2Loc(loc: text, world: world) :: location:
+   set {_locpart::*} to {_loc} parsed as "x: %num%, y: %num%, z: %num%"
+   return location({_locpart::1}, {_locpart::2}, {_locpart::3}, {_world})
+
+# ----
+
+function helpMsg(p: player):
+	send colored "&c&l<> &8&m-----&c&l Animated Blocks &8&m-----&c&l <>" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &bcreate[c] <ID> &8- &7Create an animated block" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &bremove[r] <ID> &8- &7Remove an animated block" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &bsetspeed[sp] <ID> <Number in ticks> &8- &7Set the speed of animation of an AB" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &baddblock[ab] <ID> <Block name/ID> &8- &7Add a block to an AB" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &bremoveblock[rb] <ID> <Block name/ID> &8- &7Remove a block from an AB" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &benable[e] <ID> &8- &7Enable animated block with ID" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &bdisable[d] <ID> &8- &7Disable animated block with ID" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &bparticle[p] <ID> <particle id> &8- &7Set the animation particle of an AB" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &bparticlecount[pc] <ID> <number> &8- &7Set the animation particle of an AB" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &bremoveparticle[rp] <ID> &8- &7Set the animation particle of an AB" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &blist[l] &8- &7Show the list of created animated blocks" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &btp <ID> &8- &7Teleport to an AB" to {_p}
+	send colored "%{abp::config::msg::prefix}% &7/&aab &breload[rl] plugin[pl]/config[con] &8- &7Reload the config/plugin" to {_p}
+	send colored "&c&l<> &8&m------------------------&c&l <>" to {_p}
+
+function abconReload(t: text):
+	if "%{_t}%" = "msg":
+		set {abp::config::msg::prefix} to skutil yml value "prefix" of file "{@mfile}"
+		set {abp::config::msg::abenabled} to skutil yml value "abenabled" of file "{@mfile}"
+		set {abp::config::msg::abdisabled} to skutil yml value "abdisabled" of file "{@mfile}"
+		set {abp::config::msg::idexists} to skutil yml value "idexists" of file "{@mfile}"
+		set {abp::config::msg::idnotexist} to skutil yml value "idnotexist" of file "{@mfile}"
+		set {abp::config::msg::noids} to skutil yml value "noids" of file "{@mfile}"
+		set {abp::config::msg::alreadyenabled} to skutil yml value "alreadyenabled" of file "{@mfile}"
+		set {abp::config::msg::alreadydisabled} to skutil yml value "alreadydisabled" of file "{@mfile}"
+		set {abp::config::msg::speedchange} to skutil yml value "speedchange" of file "{@mfile}"
+		set {abp::config::msg::listtopline1} to skutil yml value "listtopline1" of file "{@mfile}"
+		set {abp::config::msg::listlists} to skutil yml value "listlists" of file "{@mfile}"
+		set {abp::config::msg::listbuttomline} to skutil yml value "listbuttomline" of file "{@mfile}"
+		set {abp::config::msg::nobreakmsg} to skutil yml value "nobreakmsg" of file "{@mfile}"
+		set {abp::config::msg::conreloaded} to skutil yml value "conreloaded" of file "{@mfile}"
+		set {abp::config::msg::plreloaded} to skutil yml value "plreloaded" of file "{@mfile}"
+		set {abp::config::msg::noperm} to skutil yml value "noperm" of file "{@mfile}"
+		set {abp::config::msg::particlechanged} to skutil yml value "particlechanged" of file "{@mfile}"
+		set {abp::config::msg::particlecountchanged} to skutil yml value "particlecountchanged" of file "{@mfile}"
+
+	if "%{_t}%" = "con":
+		set {abp::config::con::version} to yml value "version" of file "{@cfile}"
+		set {abp::config::con::nobreak} to yml value "nobreak" of file "{@cfile}"
+		if yml value "particles-radius" of file "{@cfile}" doesn't exist:
+			set yml value "particles-radius" of file "{@cfile}" to "15"
+		set {abp::config::con::particles-radius} to yml value "particles-radius" of file "{@cfile}" # 1.3
+		set {abp::config::con::particles-radius} to "%{abp::config::con::particles-radius}%" parsed as integer # 1.3
+		if yml "blocks" in file "{@cfile}" exists:
+			set {_c::*} to yml nodes "blocks" of file "{@cfile}"
+			if {_c::*} is set:
+				set {abp::config::con::count::*} to amount of {_c::*}
+				if yml "blocks" in file "{@cfile}" exists:
+					set {abp::config::blocks::*} to yml nodes "blocks" of file "{@cfile}"
+					loop {abp::config::blocks::*}:
+						if yml "blocks.%loop-value%" in file "{@cfile}" exists:
+							set {abp::config::blocks::%loop-value%::id} to yml value "blocks.%loop-value%" from file "{@cfile}"
+						else:
+							send colored "{@console} {@error} &cCouldn't find value ""blocks>%loop-value%>id"" in config.yml" to console
+						if yml "blocks.%loop-value%.world" in file "{@cfile}" exists:
+							set {abp::config::blocks::%loop-value%::world} to yml value "blocks.%loop-value%.world" from file "{@cfile}"
+						else:
+							send colored "{@console} {@error} &cCouldn't find value ""blocks>%loop-value%>world"" in config.yml" to console
+						if yml "blocks.%loop-value%.location" in file "{@cfile}" exists:
+							set {abp::config::blocks::%loop-value%::location} to yml value "blocks.%loop-value%.location" from file "{@cfile}"
+						else:
+							send colored "{@console} {@error} &cCouldn't find value ""blocks>%loop-value%>location"" in config.yml" to console
+						if yml "blocks.%loop-value%.speed" in file "{@cfile}" exists:
+							set {abp::config::blocks::%loop-value%::speed} to yml value "blocks.%loop-value%.speed" from file "{@cfile}"
+						else:
+							send colored "{@console} {@error} &cCouldn't find value ""blocks>%loop-value%>speed"" in config.yml" to console
+						if yml "blocks.%loop-value%.enabled" in file "{@cfile}" exists:
+							set {abp::config::blocks::%loop-value%::enabled} to yml value "blocks.%loop-value%.enabled" from file "{@cfile}"
+						else:
+							send colored "{@console} {@error} &cCouldn't find value ""blocks>%loop-value%>enabled"" in config.yml" to console
+						if yml "blocks.%loop-value%.blocks" in file "{@cfile}" exists:
+							set {abp::config::blocks::%loop-value%::blocks::*} to yml list "blocks.%loop-value%.blocks" from file "{@cfile}"
+						else:
+							send colored "{@console} {@error} &cCouldn't find value ""blocks>%loop-value%>blocks"" in config.yml" to console
+						if yml "blocks.%loop-value%.particle" in file "{@cfile}" exists:
+							set {abp::config::blocks::%loop-value%::particle} to yml value "blocks.%loop-value%.particle" from file "{@cfile}"
+						#else:
+							#send colored "{@console} {@error} &cCouldn't find value ""blocks>%loop-value%>particle"" in config.yml" to console
+						if yml "blocks.%loop-value%.particlecount" in file "{@cfile}" exists:
+							set {abp::config::blocks::%loop-value%::particlecount} to yml value "blocks.%loop-value%.particlecount" from file "{@cfile}"
+							set {abp::config::blocks::%loop-value%::particlecount} to {abp::config::blocks::%loop-value%::particlecount} parsed as number
+						#else:
+							#send colored "{@console} {@error} &cCouldn't find value ""blocks>%loop-value%>particlecount"" in config.yml" to console
+
+
+on load:
+	send colored "&7&m-----------&a&l&o Animated Blocks Plus &7(&a&l$&7) &7&m----&r" to console
+	send colored " " to console
+	send colored "{@console} &aRunning on version &c{@Version}" to console
+	send colored "{@console} &bThank you for &lPurchasing&b my plugin :D" to console
+	send colored "{@console} &ePlugin made by &aAyham Alali &cYT&7:&a@ayham5131" to console
+	send colored " " to console
+	send colored "&7&m---- &7(&a&l$&7) &a&l&o Animated Blocks Plus &7&m-----------&r" to console
+	set {_NewVer} to text from "https://pastebin.com/raw/kYrvSyVt"
+	set {_UpdateInfo} to text from url "https://pastebin.com/raw/dpxfPmzw"
+	# Auto change for the old version
+	if yml value "version" of file "{@cfile}" != "{@NewVersion}": # v1.2.1
+		set yml value "version" of file "{@cfile}" to "{@NewVersion}"
+	# Update files
+	if yml "particlechanged" in file "{@mfile}" doesn't exist:
+		set yml value "particlechanged" of file "{@mfile}" to "&aSuccessfully changed &7{id}&a's particle to &7{particle}&a."
+		send colored "{@console} &aAdded new value ""&7particlechanged&a"" to messages.yml &7(Update 1.2)" to console
+	if yml "particlecountchanged" in file "{@mfile}" doesn't exist:
+		set yml value "particlecountchanged" of file "{@mfile}" to "&aSuccessfully changed &7{id}&a's particle count to &7{count}&a."
+		send colored "{@console} &aAdded new value ""&7particlecountchanged&a"" to messages.yml &7(Update 1.2)" to console
+	# Update check
+	send colored "{@console} &eChecking for configuration files..." to console
+	if dir "plugins/AnimatedBlocksPlus" exists:
+		send colored "{@console} &aDir &7""plugins/AnimatedBlocksPlus""&a exists." to console
+		if file "{@cfile}" exists:
+			if file "{@mfile}" exists:
+				set {_filescheck} to true
+				send colored "{@console} &aFile &7""{@cfile}""&a exists." to console
+				send colored "{@console} &aFile &7""{@mfile}""&a exists." to console
+			else if file "{@mfile}" doesn't exist:
+				set {_filescheck} to false
+				send colored "&cfile &7""{@mfile}""&c is not exist." to console
+				send colored "{@console} &cDisabling the plugin.." to console
+				execute console command "/sk disable AnimatedBlocksPlus" # /skript disable AnimatedBlocksPlusTest
+				stop
+		if file "{@cfile}" doesn't exist:
+			if file "{@mfile}" doesn't exist:
+				set {_filescheck} to false
+				send colored "{@console} &cConfiguration files are not exist. &7(import the configuration files from the .RAR file)" to console
+				send colored "{@console} &cDisabling the plugin.." to console
+				execute console command "/sk disable AnimatedBlocksPlus" # /skript disable AnimatedBlocksPlusTest
+				stop
+	if dir "plugins/AnimatedBlocksPlus" doesn't exist:
+		set {_filescheck} to false
+		send colored "{@console} &cDir &7""plugins/AnimatedBlocksPlus""&c is not exist &7(import the configuration files from the .RAR file)" to console
+		send colored "{@console} &cDisabling the plugin.." to console
+		execute console command "/sk disable AnimatedBlocksPlus" # /skript disable AnimatedBlocksPlusTest
+		stop
+
+	if "%{_filescheck}%" = "true":
+		abconReload("msg")
+		abconReload("con")
+		send colored "{@console} &aReloaded configuration files." to console
+
+	send colored "{@console} &eChecking for updates..." to console
+	if "%{abp::config::con::version}%" != "%{_NewVer}%":
+		replace all "$nl" with new line in {_UpdateInfo}
+		replace all "$p" with "%{abp::config::msg::prefix}%" in {_UpdateInfo}
+		replace all "$ov" with "%{abp::config::con::version}%" in {_UpdateInfo}
+		replace all "$nv" with "%{_NewVer}%" in {_UpdateInfo}
+		send colored "%{_UpdateInfo}%" to console
+	else if "%{_NewVer}%" is "%{abp::config::con::version}%":
+		send colored "{@console}&a Plugin is up to date&7, &ano new updates." to console
+
+	loop all players:
+		if loop-player has permission "ab.checkupdate":
+			if "%{_NewVer}%" != "%{abp::config::con::version}%":
+				replace all "$nl" with new line in {_UpdateInfo}
+				replace all "$p" with "%{abp::config::msg::prefix}%" in {_UpdateInfo}
+				replace all "$ov" with "%{abp::config::con::version}%" in {_UpdateInfo}
+				replace all "$nv" with "%{_NewVer}%" in {_UpdateInfo}
+				send colored "%{_UpdateInfo}%" to loop-player
+			else if "%{_NewVer}%" is "%{abp::config::con::version}%":
+				send colored "%{abp::config::msg::prefix}%&a Plugin is up to date&7, &ano new updates." to loop-player
+	wait a tick
+	send colored "{@console} &ahas been loaded successfully." to console
+
+on unload:
+	send colored "{@console} &chas been unloaded successfully." to console
+
+command /animatedblocks [<text>] [<text>] [<text>]:
+	permission: abp.cmd.main
+	permission message: &cYou don't have enough permissions.
+	aliases: ab, animatedb, ablocks
+	description: &aCreate animated blocks and customize them like what you like.
+	trigger:
+		if arg-1 is not set:
+			helpMsg(player)
+			stop
+		if arg-1 is "reload" or "rl":
+			if arg-2 is "config" or "con":
+				if sender has permission "abp.cmd.main.reload":
+					abconReload("msg")
+					abconReload("con")
+					send colored "%{abp::config::msg::prefix}% %{abp::config::msg::conreloaded}%"
+					stop
+				else:
+					send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+					stop
+			if arg-2 is "plugin" or "pl":
+				if sender has permission "abp.cmd.main.reload":
+					execute console command "/sk reload AnimatedBlocksPlus"
+					wait a tick
+					send colored "%{abp::config::msg::prefix}% %{abp::config::msg::plreloaded}%"
+					stop
+				else:
+					send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+					stop
+			else:
+				send colored "%{abp::config::msg::prefix}% &aUsage: &7/ab reload &cconfig[con]&7/&cplugin[pl]"
+				stop
+		if arg-1 is "particle" or "p":
+			if sender has permission "abp.cmd.main.particle":
+				if arg-2 is set:
+					if arg-3 is set:
+						set yml value "blocks.%arg-2%.particle" of file "{@cfile}" to "%arg-3%"
+						if yml "blocks.%arg-2%.particlecount" in file "{@cfile}" doesn't exist:
+							set yml value "blocks.%arg-2%.particlecount" of file "{@cfile}" to "10"
+						set {_m} to "%{abp::config::msg::particlechanged}%"
+						replace all "{id}" with "%arg-2%" in {_m}
+						replace all "{particle}" with "%arg-3%" in {_m}
+						send colored "%{abp::config::msg::prefix}% %{_m}%"
+						abconReload("con")
+						stop
+					else:
+						send colored "%{abp::config::msg::prefix}% &cParticle name is missing."
+						stop
+				else:
+					send colored "%{abp::config::msg::prefix}% &cID and particle name are missing."
+					stop
+			else:
+				send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+				stop
+		if arg-1 is "particlecount" or "pc":
+			if sender has permission "abp.cmd.main.particlecount":
+				if arg-2 and arg-3 is set:
+					set yml value "blocks.%arg-2%.particlecount" of file "{@cfile}" to "%arg-3%"
+					set {_m} to "%{abp::config::msg::particlecountchanged}%"
+					replace all "{id}" with "%arg-2%" in {_m}
+					replace all "{count}" with "%arg-3%" in {_m}
+					send colored "%{abp::config::msg::prefix}% %{_m}%"
+					abconReload("con")
+					stop
+				else:
+					send colored "%{abp::config::msg::prefix}% &cID and particle count are missing."
+					stop
+			else:
+				send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+				stop
+		if arg-1 is "removeparticle" or "rp":
+			if sender has permission "abp.cmd.main.removeparticle":
+				if arg-2 is set:
+					if yml "blocks.%arg-2%.particle" in file "{@cfile}" exists:
+						delete yml value "blocks.%arg-2%.particle" of file "{@cfile}"
+						send colored "%{abp::config::msg::prefix}% &aRemoved %arg-2%'s particle."
+						abconReload("con")
+					else:
+						send colored "%{abp::config::msg::prefix}% &cCould not find %arg-2%'s particle."
+					if yml "blocks.%arg-2%.particlecount" in file "{@cfile}" exists:
+						delete yml value "blocks.%arg-2%.particlecount" of file "{@cfile}"
+						send colored "%{abp::config::msg::prefix}% &aRemoved %arg-2%'s particle count."
+						abconReload("con")
+					else:
+						send colored "%{abp::config::msg::prefix}% &cCould not find %arg-2%'s particle."
+					stop
+		if arg-1 is "version" or "v":
+			if sender has permission "abp.cmd.main.version":
+				set {_m} to colored "%{abp::config::msg::prefix}% &a»Plugin Page«||ttp:&bClick here to go to the plugin's page||url:https://goo.gl/c34CKe"
+				send colored "&c&l&m*&8&m----------&c&l&m*&r"
+				send colored ""
+				send colored "%{abp::config::msg::prefix}% Running on version: &a&l%{abp::config::con::version}% "
+				json("%player%", {_m})
+				send colored ""
+				send colored "&c&l&m*&8&m----------&c&l&m*&r"
+				stop
+			else:
+				send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+				stop
+		if arg-1 is "blocks" or "b":
+			if arg-2 is set:
+				if sender has permission "abp.cmd.main.blocks":
+					if {abp::config::blocks::%arg-2%::id} is set:
+						send colored "&8&m-------&7&o Blocks of &c&l%arg-2% &8&m-------&r"
+						loop {abp::config::blocks::%arg-2%::blocks::*}:
+							send colored " &7- &a%loop-value%"
+						send colored "&8&m-----------------------&r"
+						stop
+					else:
+						set {_m} to "%{abp::config::msg::idnotexist}%"
+						replace all "{id}" with "%arg-2%" in {_m}
+						send colored "%{abp::config::msg::prefix}% %{_m}%"
+						stop
+				else:
+					send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+					stop
+			else:
+				send colored "%{abp::config::msg::prefix}% &cID argument is missing."
+				stop
+		if arg-1 is "help":
+			if player has permission "abp.cmd.main.help":
+				helpMsg(player)
+				stop
+			else:
+				send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+				stop
+		if arg-1 is "tp":
+			if arg-2 is set:
+				if player has permission "abp.cmd.main.tp":
+					if {abp::config::blocks::%arg-2%::id} is set:
+						set {_world} to {abp::config::blocks::%arg-2%::world} parsed as world
+						teleport player to block above txt2Loc("%{abp::config::blocks::%arg-2%::location}%", {_world})
+						stop
+					else:
+						set {_m} to "%{abp::config::msg::idnotexist}%"
+						replace all "{id}" with "%arg-2%" in {_m}
+						send colored "%{abp::config::msg::prefix}% %{_m}%"
+						stop
+				else:
+					send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+					stop
+		if arg-1 is "list" or "l":
+			if sender has permission "abp.cmd.main.list":
+				if {abp::config::blocks::*} is set:
+					abconReload("con")
+					set {_lt1} to "%{abp::config::msg::listtopline1}%"
+					replace all "{count}" with "%{abp::config::con::count::*}%" in {_lt1}
+					send colored "%{_lt1}%"
+					loop {abp::config::blocks::*}:
+						set {_b} to "%{abp::config::msg::listlists}%"
+						replace all "{blocks}" with "%loop-value%" in {_b}
+						send colored "%{_b}%"
+					send colored "%{abp::config::msg::listbuttomline}%"
+					stop
+				else:
+					send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noids}%"
+					stop
+			else:
+				send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+				stop
+		if arg-1 is "setspeed" or "sp":
+			if arg-2 is set:
+				if arg-3 is set:
+					if sender has permission "abp.cmd.main.setspeed":
+						if yml value "blocks.%arg-2%" from file "{@cfile}" exists:
+							if arg-3 parsed as integer < 10:
+								send "%{abp::config::msg::prefix}% &cThe lowest accepted value of blocks speed in 10 ticks."
+								stop
+							set yml value "blocks.%arg-2%.speed" from file "{@cfile}" to "%arg-3%"
+							set {_m} to "%{abp::config::msg::speedchange}%"
+							set {_s} to yml value "blocks.%arg-2%.speed" of file "plugins/AnimatedBlocksPlus/config.yml"
+							replace all "{id}" with "%arg-2%" in {_m}
+							replace all "{speed}" with "%{_s}%" in {_m}
+							send colored "%{abp::config::msg::prefix}% %{_m}%"
+							abconReload("con")
+							stop
+						else:
+							set {_m} to "%{abp::config::msg::idnotexist}%"
+							replace all "{id}" with "%arg-2%" in {_m}
+							send colored "%{abp::config::msg::prefix}% %{_m}%"
+							stop
+					else:
+						send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+						stop
+				else:
+					send colored "%{abp::config::msg::prefix}% &cMissing the speed argument."
+					stop
+			else:
+				send colored "%{abp::config::msg::prefix}% &cMissing ID and speed argument."
+				stop
+		if arg-1 is "enable" or "e":
+			if arg-2 is set:
+				if sender has permission "abp.cmd.main.enable":
+					if yml value "blocks.%arg-2%" from file "{@cfile}" is set:
+						if yml value "blocks.%arg-2%.enabled" from file "{@cfile}" is "false":
+							set yml value "blocks.%arg-2%.enabled" of file "{@cfile}" to "true"
+							set {_e} to "%{abp::config::msg::abenabled}%"
+							replace all "{id}" with "%arg-2%" in {_e}
+							send colored "%{abp::config::msg::prefix}% %{_e}%"
+							abconReload("con")
+							stop
+						else:
+							set {_ae} to "%{abp::config::msg::alreadyenabled}%"
+							replace all "{id}" with "%arg-2%" in {_ae}
+							send colored "%{abp::config::msg::prefix}% %{_ae}%"
+							stop
+					else:
+						set {_m} to "%{abp::config::msg::idnotexist}%"
+						replace all "{id}" with "%arg-2%" in {_m}
+						send colored "%{abp::config::msg::prefix}% %{_m}%"
+						stop
+				else:
+					send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+					stop
+		if arg-1 is "disable" or "d":
+			if arg-2 is set:
+				if sender has permission "abp.cmd.main.disable":
+					if yml value "blocks.%arg-2%" from file "{@cfile}" is set:
+						if yml value "blocks.%arg-2%.enabled" from file "{@cfile}" is "true":
+							set yml value "blocks.%arg-2%.enabled" of file "{@cfile}" to "false"
+							set {_d} to "%{abp::config::msg::abdisabled}%"
+							replace all "{id}" with "%arg-2%" in {_d}
+							send colored "%{abp::config::msg::prefix}% %{_d}%"
+							abconReload("con")
+							stop
+						else:
+							set {_ad} to "%{abp::config::msg::alreadydisabled}%"
+							replace all "{id}" with "%arg-2%" in {_ad}
+							send colored "%{abp::config::msg::prefix}% %{_ad}%"
+							stop
+					else:
+						set {_m} to "%{abp::config::msg::idnotexist}%"
+						replace all "{id}" with "%arg-2%" in {_m}
+						send colored "%{abp::config::msg::prefix}% %{_m}%"
+						stop
+				else:
+					send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+					stop
+		if arg-1 is "create" or "c":
+			if arg-2 is set:
+				if player has permission "abp.cmd.main.create":
+					if yml "blocks.%arg-2%" in file "{@cfile}" doesn't exist:
+						add 1 to {ab.blocks.count}
+						set yml value "blocks.%arg-2%.enabled" of file "{@cfile}" to "false"
+						set yml value "blocks.%arg-2%.world" of file "{@cfile}" to "%player's world%"
+						set yml value "blocks.%arg-2%.location" of file "{@cfile}" to "%location of targeted block%"
+						set yml value "blocks.%arg-2%.speed" of file "{@cfile}" to "1"
+						add "diamond_ore" to yml list "blocks.%arg-2%.blocks" of file "{@cfile}"
+						add "gold_ore" to yml list "blocks.%arg-2%.blocks" of file "{@cfile}"
+						abconReload("con")
+						send colored "%{abp::config::msg::prefix}% &aRegistered a new animated block:"
+						send colored "%{abp::config::msg::prefix}% &7 ID: &a%arg-2%"
+						send colored "%{abp::config::msg::prefix}% &7 World: &a%{abp::config::blocks::%arg-2%::world}%"
+						send colored "%{abp::config::msg::prefix}% &7 Location: &a%{abp::config::blocks::%arg-2%::location}%"
+						if "%{abp::config::blocks::%arg-2%::enabled}%" is "true":
+							send colored "%{abp::config::msg::prefix}% &7 Enabled: &a%{abp::config::blocks::%arg-2%::enabled}%"
+						if "%{abp::config::blocks::%arg-2%::enabled}%" is "false":
+							send colored "%{abp::config::msg::prefix}% &7 Enabled: &c%{abp::config::blocks::%arg-2%::enabled}%"
+						send colored "%{abp::config::msg::prefix}% &7 Blocks:"
+						loop {abp::config::blocks::%arg-2%::blocks::*}:
+							send colored "%{abp::config::msg::prefix}%&7  - &a%loop-value%"
+						stop
+					else:
+						set {_m} to "%{abp::config::msg::idexists}%"
+						replace all "{id}" with "%arg-2%" in {_m}
+						send colored "%{abp::config::msg::prefix}% %{_m}%"
+						stop
+				else:
+					send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+					stop
+			else:
+				helpMsg(player)
+				stop
+		if arg-1 is "remove" or "r":
+			if arg-2 is set:
+				if sender has permission "abp.cmd.main.remove":
+					if yml "blocks.%arg-2%" in file "{@cfile}" doesn't exist:
+						set {_m} to "%{abp::config::msg::idnotexist}%"
+						replace all "{id}" with "%arg-2%" in {_m}
+						send colored "%{abp::config::msg::prefix}% %{_m}%"
+						stop
+					else: #yml value "blocks.%arg-2%" of file "{@cfile}" is set:
+						remove 1 from {ab.blocks.count}
+						send colored "%{abp::config::msg::prefix}% &aRemoved animated block with ID: %arg-2%"
+						wait a tick
+						delete yml value "blocks.%arg-2%" of file "{@cfile}"
+						abconReload("con")
+						stop
+				else:
+					send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+					stop
+
+			else:
+				helpMsg(player)
+				stop
+		if arg-1 is "addblock" or "ab":
+			if arg-2 is set:
+				if arg-3 is set:
+					if sender has permission "abp.cmd.main.addblock":
+						if yml value "blocks.%arg-2%" of file "{@cfile}" is set:
+							add "%arg-3%" to yml list "blocks.%arg-2%.blocks" of file "{@cfile}"
+							send colored "%{abp::config::msg::prefix}% &aAdded &7%arg-3%&a to &7%arg-2%&a's blocks."
+							send colored "%{abp::config::msg::prefix}% &7Blocks:"
+							set {_bl::*} to yml list "blocks.%arg-2%.blocks" of file "{@cfile}"
+							loop {_bl::*}:
+								send colored "%{abp::config::msg::prefix}%   &7- &a%loop-value%"
+							abconReload("con")
+							stop
+						else:
+							set {_m} to "%{abp::config::msg::idnotexist}%"
+							replace all "{id}" with "%arg-2%" in {_m}
+							send colored "%{abp::config::msg::prefix}% %{_m}%"
+					else:
+						send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+						stop
+				else:
+					send colored "%{abp::config::msg::prefix}% &a/ab &baddblock <ID> <Block name/ID>"
+					stop
+			else:
+				send colored "%{abp::config::msg::prefix}% &a/ab &baddblock <ID> <Block name/ID>"
+				stop
+		if arg-1 is "removeblock" or "rb":
+			if arg-2 is set:
+				if arg-3 is set:
+					if sender has permission "abp.cmd.main.removeblock":
+						if yml value "blocks.%arg-2%" of file "{@cfile}" is set:
+							remove "%arg-3%" from yml list "blocks.%arg-2%.blocks" of file "{@cfile}"
+							send colored "%{abp::config::msg::prefix}% &cRemoved &7%arg-3%&a from &7%arg-2%&a's blocks."
+							send colored "%{abp::config::msg::prefix}% &7Blocks:"
+							set {_bl::*} to yml list "blocks.%arg-2%.blocks" of file "{@cfile}"
+							loop {_bl::*}:
+								send colored "%{abp::config::msg::prefix}%   &7- &a%loop-value%"
+							abconReload("con")
+							stop
+						else:
+							set {_m} to "%{abp::config::msg::idnotexist}%"
+							replace all "{id}" with "%arg-2%" in {_m}
+							send colored "%{abp::config::msg::prefix}% %{_m}%"
+							stop
+					else:
+						send colored "%{abp::config::msg::prefix}% %{abp::config::msg::noperm}%"
+						stop
+				else:
+					send colored "%{abp::config::msg::prefix}% &a/ab &bremoveblock <ID> <Block name/ID>"
+					stop
+			else:
+				send colored "%{abp::config::msg::prefix}% &a/ab &bremoveblock <ID> <Block name/ID>"
+				stop
+		if arg-1 is not "setspeed" or "enable" or "disable" or "create" or "remove" or "addblock" or "removeblock" or "list" or "tp" or "rl"  or "e"  or "d"  or "c"  or "r"  or "ab"  or "rb"  or "b":
+			helpMsg(player)
+			stop
+
+on break:
+	if {abp::config::blocks::*} is set:
+		loop {abp::config::blocks::*}:
+			if "%{abp::config::blocks::%loop-value%::location}%" = "%location of event-block%":
+				if "%{abp::config::con::nobreak}%" = "true":
+					cancel event
+					send colored "%{abp::config::msg::prefix}% %{abp::config::msg::nobreakmsg}%"
+
+
+every 1 tick:
+	if {abp::config::blocks::*} is set:
+		loop {abp::config::blocks::*}:
+			if "%{abp::config::blocks::%loop-value%::enabled}%" = "true":
+				if {abp::config::blocks::%loop-value%::blocks::*} is set:
+					loop {abp::config::blocks::%loop-value%::blocks::*}:
+						add 1 to {abp::config::blocks::%loop-value-1%::waiting-until-refresh}
+						if {abp::config::blocks::%loop-value-1%::waiting-until-refresh} > {abp::config::blocks::%loop-value-1%::speed} parsed as integer:
+							delete {abp::config::blocks::%loop-value-1%::waiting-until-refresh}
+						if {abp::config::blocks::%loop-value-1%::speed} parsed as integer >= 10:
+							if {abp::config::blocks::%loop-value-1%::waiting-until-refresh} = {abp::config::blocks::%loop-value-1%::speed} parsed as integer:
+								set {_w} to {abp::config::blocks::%loop-value-1%::world} parsed as world
+								set block at txt2Loc({abp::config::blocks::%loop-value-1%::location}, {_w}) to ({abp::config::blocks::%loop-value-1%::blocks::%loop-index-2%} parsed as item type)
+								if {abp::config::blocks::%loop-value-1%::particle} is set:
+									if {abp::config::blocks::%loop-value-1%::particlecount} is set:
+										loop all players in radius {abp::config::con::particles-radius} around block at txt2Loc({abp::config::blocks::%loop-value-1%::location}, {_w}):
+											show {abp::config::blocks::%loop-value-1%::particlecount} "%{abp::config::blocks::%loop-value-1%::particle}%" particle at txt2Loc({abp::config::blocks::%loop-value-1%::location}, {_w}) for loop-player
+
+
+
+# ------
+# 
+# <> End of Code
+# By Ayham Alali <>
+# 
+# ------
